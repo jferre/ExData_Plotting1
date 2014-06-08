@@ -1,5 +1,8 @@
 setwd("C:/Users/James/Documents/GitHub/ExData_Plotting1")
 
+download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip","rawdata.zip")
+unzip("rawdata.zip")
+
 rawdb <- read.table("household_power_consumption.txt",
                     header = T,sep = ";",na.strings = c("NA","?"),
                     colClasses = c("character","character","numeric",
